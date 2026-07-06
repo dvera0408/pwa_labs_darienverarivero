@@ -1,0 +1,363 @@
+.app-shell {
+    min-height: 100%;
+}
+
+.page {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 32px 24px 80px;
+}
+
+/* ---------- Home ---------- */
+.hero {
+    margin-bottom: 36px;
+}
+
+.hero-eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    margin: 0 0 8px;
+}
+
+.hero-title {
+    font-size: 32px;
+    margin: 0 0 10px;
+    letter-spacing: -0.02em;
+}
+
+.hero-sub {
+    color: var(--text-dim);
+    max-width: 640px;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.lab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.lab-tile {
+    display: block;
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    transition:
+        border-color 0.15s ease,
+        transform 0.15s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.lab-tile::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--tile-color, var(--accent));
+}
+
+.lab-tile:hover {
+    border-color: var(--border-soft);
+    transform: translateY(-2px);
+}
+
+.lab-tile-numero {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--tile-color, var(--accent));
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.lab-tile-titulo {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 8px 0 6px;
+    line-height: 1.35;
+}
+
+.lab-tile-desc {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.5;
+    margin: 0 0 10px;
+}
+
+.lab-tile-count {
+    font-size: 12px;
+    color: var(--text-faint);
+}
+
+/* ---------- Breadcrumb / back nav ---------- */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-faint);
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.breadcrumb a {
+    color: var(--text-dim);
+}
+
+.breadcrumb a:hover {
+    color: var(--accent);
+}
+
+/* ---------- Exercise list ---------- */
+.exercise-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.exercise-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 18px;
+    transition: border-color 0.15s ease;
+}
+
+.exercise-row:hover {
+    border-color: var(--border-soft);
+}
+
+.exercise-row-title {
+    font-weight: 600;
+    margin: 0 0 4px;
+}
+
+.exercise-row-summary {
+    color: var(--text-dim);
+    font-size: 13px;
+    margin: 0;
+}
+
+.exercise-row-arrow {
+    color: var(--text-faint);
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+/* ---------- Exercise detail / solution viewer ---------- */
+.tabs {
+    display: flex;
+    gap: 4px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    padding: 10px 16px;
+    font-weight: 600;
+    font-size: 14px;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-btn.active {
+    color: var(--text);
+    border-bottom-color: var(--accent);
+}
+
+.file-tabs {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.file-tab {
+    background: var(--bg-panel-2);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: var(--mono);
+}
+
+.file-tab.active {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-soft);
+}
+
+.preview-frame {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+}
+
+/* ---------- Shared demo styles (used inside solution components) ---------- */
+.demo-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 14px;
+}
+
+.seccion-titulo {
+    font-family: var(--mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-faint);
+    margin: 0 0 10px;
+}
+
+.muted {
+    color: var(--text-dim);
+    font-size: 13px;
+}
+
+.badge {
+    display: inline-block;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-radius: 999px;
+    padding: 2px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+}
+
+.tabla th,
+.tabla td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border-soft);
+    font-size: 14px;
+}
+
+.tabla th {
+    color: var(--text-faint);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.input {
+    background: var(--bg-panel-2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 4px;
+}
+
+.input:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    color: var(--text-dim);
+}
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.btn-primario {
+    background: var(--accent);
+    color: #0b1710;
+}
+
+.btn-secundario {
+    background: var(--bg-panel-2);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.btn-peligro {
+    background: var(--danger);
+    color: #2a0d0d;
+}
+
+.btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.code-block {
+    background: #0b0d12;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 12.5px;
+    overflow-x: auto;
+    line-height: 1.5;
+}
+
+.nota-card {
+    display: block;
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: 8px;
+    padding: 12px 14px;
+    color: var(--text);
+}
+
+.nota-card:hover {
+    border-color: var(--accent);
+}
+
+.stat-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: 8px;
+    padding: 14px 20px;
+    min-width: 100px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+/* ---------- Notas grid ---------- */
+.notas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+}
